@@ -1,4 +1,4 @@
-scrapyd
+scrapyd==1.2.0
 redis
 requests
 rq
