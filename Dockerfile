@@ -12,7 +12,7 @@ RUN set -x \
 RUN set -x \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
-      python-3 python3-dev python3-pip \
+      python3 python3-dev python3-pip \
       libssl-dev libxml2-dev libxslt-dev libffi-dev \
       build-essential
 
