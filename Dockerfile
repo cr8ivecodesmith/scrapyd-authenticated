@@ -12,7 +12,7 @@ RUN set -x \
 RUN set -x \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
-      python3 python3-dev python3-pip \
+      python3 python3-dev python3-pip python3-setuptools \
       libssl-dev libxml2-dev libxslt-dev libffi-dev \
       build-essential
 
@@ -32,7 +32,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 
 VOLUME /scrapyd
 
-RUN pip3 install --upgrade setuptools
+RUN pip3 install --upgrade pip
 
 ADD scrapyd.conf /etc/scrapyd/scrapyd.conf
 ADD nginx.conf /etc/nginx/sites-enabled/default
